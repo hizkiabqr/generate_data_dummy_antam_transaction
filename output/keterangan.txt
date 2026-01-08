@@ -1,0 +1,34 @@
+Semua 25 Kolom Sesuai Header:
+
+- transaction_id - Format: TRX20241201000001
+- transaction_date - Format: 2024-12-01
+- transaction_time - Format: 14:23:45
+- customer_id - Format: IND10234, COR45678, dll
+- customer_type - Individual/Corporate/Investor/Reseller/VIP
+- customer_region - 10 provinsi di Indonesia
+- product_id - Format: BAT-001, PER-C01, dll
+- product_name - Nama produk lengkap
+- product_category - Batangan/Perhiasan
+- purity_level - 99.99% (batangan), 70-75% (perhiasan)
+- quantity - Jumlah item
+- unit_price - Harga per unit (fluktuatif)
+- total_gross_amount - Total sebelum diskon
+- discount_amount - Diskon (VIP dapat lebih besar)
+- tax_amount - PPN 11%
+- total_net_amount - Total akhir
+- payment_method - Cash/Debit/Credit/Transfer/E-Wallet
+- payment_status - Paid/Pending/Failed
+- sales_channel - Store/Online/Mobile/Reseller/Corporate
+- branch_code - JKT-001, SBY-001, dll
+- cost_of_goods_sold - COGS (untuk analisis profit) biaya produksi barang yang benar2 terjual COGS naik → bisa karena bahan baku mahal, proses boros COGS turun → produksi lebih efisien
+- gross_profit - Laba kotor
+- year - Tahun transaksi
+- month - Bulan transaksi
+- quarter - Kuartal (Q1-Q4)
+
+Termasuk COGS
+- Bahan baku (emas, nikel, batubara, dll — cocok kalau konteksnya PT Antam)
+- Biaya tenaga kerja langsung (operator, teknisi produksi)
+- Biaya mesin produksi
+- Biaya energi untuk produksi
+- Biaya pengemasan produk
