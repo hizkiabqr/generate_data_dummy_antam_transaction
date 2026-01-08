@@ -17,7 +17,33 @@ Period: 1 Januari 2025 - 31 Desember 2025
 File Formats: CSV, Parquet
 
 Data Schema (24 Columns)
-ColumnTypeDescriptiontransaction_idStringUnique ID (TRX20250101000001)transaction_dateDateTanggal transaksi (YYYY-MM-DD)transaction_timeTimeWaktu transaksi (HH:MM:SS)customer_idStringCustomer ID (IND10000, COR20000, etc)customer_typeStringIndividual, Corporate, Investor, Reseller, VIPcustomer_regionStringProvinsi customer (10 regions)product_idStringProduct code (BAT-001, PER-C01, etc)product_nameStringNama produk lengkapproduct_categoryStringBatangan / Perhiasanpurity_levelStringKadar emas (99.99%, 75%, 70%)quantityIntegerJumlah item dibeliunit_priceIntegerHarga per unit (Rupiah)total_gross_amountIntegerTotal sebelum diskondiscount_amountIntegerNilai diskontax_amountIntegerPPN 11%total_net_amountIntegerTotal setelah diskon + pajakpayment_methodStringCash, Debit, Credit, Transfer, E-Walletsales_channelStringStore, Online, Mobile App, Reseller, etcbranch_codeStringKode cabang (JKT-001, SBY-001, etc)cost_of_goods_soldIntegerCOGS (Rupiah)gross_profitIntegerLaba kotoryearIntegerTahun transaksimonthIntegerBulan (1-12)quarterIntegerKuartal (1-4)
+| Column Name        | Type    | Description                                                   |
+| ------------------ | ------- | ------------------------------------------------------------- |
+| transaction_id     | String  | Unique ID transaksi (contoh: `TRX20250101000001`)             |
+| transaction_date   | Date    | Tanggal transaksi (format `YYYY-MM-DD`)                       |
+| transaction_time   | Time    | Waktu transaksi (format `HH:MM:SS`)                           |
+| customer_id        | String  | ID customer (contoh: `IND10000`, `COR20000`, dll)             |
+| customer_type      | String  | Tipe customer: Individual, Corporate, Investor, Reseller, VIP |
+| customer_region    | String  | Provinsi / region customer (±10 region)                       |
+| product_id         | String  | Kode produk (contoh: `BAT-001`, `PER-C01`)                    |
+| product_name       | String  | Nama produk lengkap                                           |
+| product_category   | String  | Kategori produk: Batangan / Perhiasan                         |
+| purity_level       | String  | Kadar emas (contoh: 99.99%, 75%, 70%)                         |
+| quantity           | Integer | Jumlah item yang dibeli                                       |
+| unit_price         | Integer | Harga per unit (Rupiah)                                       |
+| total_gross_amount | Integer | Total sebelum diskon                                          |
+| discount_amount    | Integer | Nilai diskon                                                  |
+| tax_amount         | Integer | Pajak PPN 11%                                                 |
+| total_net_amount   | Integer | Total akhir (setelah diskon + pajak)                          |
+| payment_method     | String  | Metode pembayaran: Cash, Debit, Credit, Transfer, E-Wallet    |
+| sales_channel      | String  | Channel penjualan: Store, Online, Mobile App, Reseller        |
+| branch_code        | String  | Kode cabang (contoh: `JKT-001`, `SBY-001`)                    |
+| cost_of_goods_sold | Integer | Harga pokok penjualan (COGS)                                  |
+| gross_profit       | Integer | Laba kotor (`total_net_amount - COGS`)                        |
+| year               | Integer | Tahun transaksi                                               |
+| month              | Integer | Bulan transaksi (1–12)                                        |
+| quarter            | Integer | Kuartal transaksi (1–4)                                       |
+
 🏅 Product Catalog
 Emas Batangan (7 SKU)
 
